@@ -1,0 +1,141 @@
+body {
+font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+margin: 0;
+padding: 0;
+}      
+
+.container {
+    max-width: 1170px;
+    margin: 0 auto; /* it will set the right and left margin follow the width */
+}
+
+.right-nav {
+    float: right;
+    margin-right: -25px;
+}
+
+.left-nav {
+    float: left;
+}
+
+nav {
+    height: 65px;
+    background-color: #528aae;
+}
+
+.right-nav a, .left-nav a{          /* It will change both of em */
+    line-height: 65px;
+    color: white;
+}
+
+.right-nav a{
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+}
+
+.left-nav a{
+    line-height: 65px;
+    padding: 0 25px;
+    color: white;
+}
+
+a {
+    text-decoration: none;
+}
+
+.right-nav :hover, .left-nav :hover{
+    background-color: #1975af;
+    transition: 0.5s; /* it will give some time to the targeted effect */
+}
+
+.right-nav a {
+    line-height: 65px;
+    padding: 0 25px;
+    display: block;
+    color: white;
+    float: left;
+    transition: 0.5s; /* it will give some time to the targeted effect */
+}
+
+.left-nav a {
+    line-height: 65px;
+    display: block;
+    color: white;
+    transition: 0.5s; /* it will give some time to the targeted effect */
+}
+
+.myPic{
+    min-width: 350px;
+    border: solid black; /* optional, it's just so you can see the size */
+}
+
+.myPic img{
+    width: 100%; /* it makes your source follow the parents size, as for <img> the parent is .myPic */
+    height: auto;
+    border-radius: 0.5rem;
+}
+
+#aboutMe .container{
+    text-align: center;
+}
+
+.title{
+    padding-top: 80px;
+    padding-bottom: 50px;
+    font-size: large;
+}
+
+.bio-container{
+    display: flex;
+}
+
+.bio-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+/* for 1250px and smaller */
+
+@media screen and (max-width: 1250px) {
+    .container {
+        max-width:max-content;
+    }
+
+    .myBio {
+        margin-left: 2rem;
+    }
+}
+
+/* for 500px and smaller */
+@media screen and (max-width: 500px){
+    .container {
+        min-width: 300px;
+    }
+
+    nav {
+        text-align: center;
+        height:auto;
+    }
+    
+    .right-nav, .left-nav {
+        background-color: #528aae;
+        float: none;
+        margin: 0%;
+    }
+
+    .right-nav a, .left-nav a {
+        color: white;
+        float: none;
+    }
+
+    .myPic{
+        width: 250px;
+    }
+
+    .myBio {
+        margin: 0 2rem;
+    }
+}
+
